@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Faça um Programa que leia três números e mostre-os em ordem decrescente. -->
+
+    Receber número 1:
+    <input id="input_numero1"> <br>
+    Receber número 2:
+    <input id="input_numero2"> <br>
+    Receber número 3:
+    <input id="input_numero3"> <br>
+
+    <button onclick="ordemDecrescente()">
+        Mostrar números em ordem decrescente
+    </button>
+
+    <div id="div_decrescente"></div>
+</body>
+
+</html>
+<script>
+    function ordemDecrescente() {
+        var numero1 = Number(input_numero1.value);
+        var numero2 = Number(input_numero2.value);
+        var numero3 = Number(input_numero3.value);
+
+        // if(numero3 > numero2 && numero3 > numero1){
+        //     div_decrescente.innerHTML += `${numero3}`;
+        // }
+        // if(numero2 > numero1 && numero2 > numero3){
+        //     div_decrescente.innerHTML += `${numero2}`;
+        // }
+        // if(numero1 > numero2 && numero1 > numero3){
+        //     div_decrescente.innerHTML += `${numero1}`;
+        // }
+        //     div_decrescente.innerHTML += `${numero1}`;
+        // }
+        // if((numero3 > numero2 && numero3 > numero1) || (numero2 > numero1 && numero2 > numero3) || (numero1 > numero2 && numero1 > numero3)){
+        //     div_decrescente.innerHTML = `${numero3}<br>
+        //                                  ${numero2}<br>
+        //                                  ${numero1}`;
+
+        if (numero3 > numero2 && numero3 > numero1) {
+            div_decrescente.innerHTML += `${numero3}`;
+        }
+        if (numero2 > numero1 && numero2 < numero3) {
+            div_decrescente.innerHTML += `${numero2}`;
+        }
+        if(numero1 < numero2 && numero1 <numero3){
+            div_decrescente.innerHTML += `${numero1}`;
+        }
+
+}
+</script>

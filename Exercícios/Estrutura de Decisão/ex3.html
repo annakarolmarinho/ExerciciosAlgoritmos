@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite o Gênero de sexo:
+    <input type="text" id="input_genero" onkeyup="keyup()">
+
+
+    <div id="div_genero"></div>
+
+</body>
+
+</html>
+<script>
+    function keyup() {
+
+        var genero = input_genero.value;
+
+
+        if (genero == F) {
+            div_genero.innerHTML = `Feminino`;
+        } else if (genero == M) {
+            div_genero.innerHTML = `Maculino`;
+        } else {
+            div_genero.innerHTML = `sexo inválido`;
+        }
+
+
+
+
+    }
+</script>

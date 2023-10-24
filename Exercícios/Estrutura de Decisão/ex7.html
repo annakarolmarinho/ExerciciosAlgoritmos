@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Faça um Programa que leia três números e mostre o maior deles. -->
+    Receber número 1:
+    <input id="input_numero1">
+    Receber número 2:
+    <input id="input_numero2">
+    Receber número 3:
+    <input id="input_numero3">
+
+    <button onclick="maiorDeles()">
+        Maior numero
+    </button>
+    <div id="div_maiorNumero"></div>
+</body>
+
+</html>
+<script>
+    function maiorDeles() {
+        var numero1 = Number(input_numero1.value);
+        var numero2 = Number(input_numero2.value);
+        var numero3 = Number(input_numero3.value);
+
+        if (numero1 > numero2 && numero1 > numero3) {
+            div_maiorNumero.innerHTML += `Maior numero é o numero 1 que é igual a ${numero1}<br>`;
+        } else if (numero2 > numero1 && numero2 > numero3) {
+            div_maiorNumero.innerHTML += `Maior numero é o numero 2 que é igual a ${numero2}<br>`;
+        } else if (numero3 > numero1 && numero3 > numero2) {
+            div_maiorNumero.innerHTML += `Maior numero é o numero 3 que é igual a ${numero3}<br>`;
+        }
+
+        if (numero1 < numero2 && numero1 < numero3) {
+            div_maiorNumero.innerHTML += `Menor numero é o numero 1 que é igual a ${numero1}`;
+        } else if (numero2 < numero1 && numero2 < numero3) {
+            div_maiorNumero.innerHTML += `Menor numero é o numero 2 que é igual a ${numero2}`;
+        } else if (numero3 < numero1 && numero3 < numero2) {
+            div_maiorNumero.innerHTML += `Menor numero é o numero 3 que é igual a ${numero3}`;
+        }
+
+    }
+</script>

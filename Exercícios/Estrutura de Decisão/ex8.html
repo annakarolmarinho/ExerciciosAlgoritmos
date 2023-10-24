@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato. -->
+    Preço produto 1:
+    <input id="input_precoProduto1">
+    Preço produto 2:
+    <input id="input_precoProduto2">
+    Preço produto 3:
+    <input id="input_precoProduto3">
+
+    <button onclick="qualProdutoComprar()">
+    Qual produto você deve comprar
+    </button>
+    <div id="div_precoBarato"></div>
+</body>
+</html>
+<script>
+    function qualProdutoComprar(){
+        var produto1 = Number(input_precoProduto1.value);
+        var produto2 = Number(input_precoProduto2.value);
+        var produto3 = Number(input_precoProduto3.value);
+
+        if(produto1> produto2 && produto1 > produto3){
+            div_precoBarato.innerHTML = `Você deve comprar o produto de valor ${produto1}`;
+        }else if(produto2> produto1 && produto2 > produto3){
+            div_precoBarato.innerHTML = `Você deve comprar o produto de valor ${produto2}`;
+        }else if(produto3> produto1 && produto3 > produto2){
+            div_precoBarato.innerHTML = `Você deve comprar o produto de valor ${produto3}`;
+        }
+
+    }
+</script>

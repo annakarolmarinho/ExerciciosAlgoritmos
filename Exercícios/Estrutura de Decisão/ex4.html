@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Digite uma letra: <br>
+    <input type="text" id="input_letra"> <br>
+    <button onclick="vogalConsoante()">
+        vogal ou consoante?
+    </button> <br>
+    <div id="div_letra"></div>
+</body>
+
+</html>
+<script>
+    function vogalConsoante() {
+        var letra = input_letra.value;
+
+        if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+            div_letra.innerHTML = `Vogal`;
+        } else {
+            div_letra.innerHTML = `Consoante`;
+        }
+    }
+</script>

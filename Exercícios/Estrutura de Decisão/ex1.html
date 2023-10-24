@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Número 1:
+    <input  id="input_numero1">
+    Número 2:
+    <input id="input_numero2">
+
+    <button onclick="maiorNUmero()">
+        Maior Numero
+    </button>  
+    
+    <div id="div_maiornumero"></div>
+
+</body>
+</html>
+<script>
+    function maiorNUmero(){
+        var numero1 = Number(input_numero1.value);
+        var numero2 = Number(input_numero2.value);
+
+        if(numero1>numero2){
+            div_maiornumero.innerHTML = `${numero1}`;
+        }else if (numero2>numero1){
+            div_maiornumero.innerHTML= `${numero2}`;
+        }
+
+
+    }
+</script>
